@@ -11,12 +11,12 @@ if os.path.isfile(f"{json_file}"):
             lname = json_load["contacts"]["list"][i]["last_name"]
             phone = json_load["contacts"]["list"][i]["phone_number"]
             vcard += f"""BEGIN:VCARD
-    VERSION:3.0
-    FN:{fname} {lname}
-    N:{lname} {fname};;;
-    TEL;TYPE=CELL:{phone}
-    END:VCARD
-    """
+VERSION:3.0
+FN:{fname} {lname}
+N:{lname} {fname};;;
+TEL;TYPE=CELL:{phone}
+END:VCARD
+"""
     except IndexError:
         print("")
     vcfile="contact.vcf"
