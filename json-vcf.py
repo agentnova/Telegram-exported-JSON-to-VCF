@@ -18,7 +18,7 @@ TEL;TYPE=CELL:{phone}
 END:VCARD
 """
     except IndexError:
-        print("")
+        pass
     vcfile="contact.vcf"
     with open(vcfile, "w",encoding='utf-8') as f:
         f.write(vcard)
