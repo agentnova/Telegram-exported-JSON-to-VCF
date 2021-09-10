@@ -3,7 +3,7 @@ import os.path
 json_file=input("Enter the json file name :")
 if os.path.isfile(f"{json_file}"):
     vcard=""
-    read_file=open(json_file, "r",encoding='utf-8').read()
+    read_file=open(json_file, "r",encoding='latin-1').read()
     json_load=json.loads(read_file)
     try:
         for i in range(50000):
